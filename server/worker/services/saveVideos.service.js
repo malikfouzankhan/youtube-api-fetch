@@ -1,4 +1,4 @@
-import Video from "../../../models/video.model.js";
+import Video from "../../models/video.model.js";
 
 const saveVideos = async (videos) => {
       try {
