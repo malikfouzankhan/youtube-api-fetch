@@ -1,7 +1,7 @@
-import { getApiKey, rotateApiKey } from "../api/src/utils/keyManager.js";
-import fetchVideos from "../services/youtube.service.js";
-import transformVideos from "../services/transform.service.js";
-import saveVideos from "../services/saveVideos.service.js";
+import { getApiKey, rotateApiKey } from "./utils/keyManager.js";
+import fetchVideos from "./services/youtube.service.js";
+import transformVideos from "./services/transform.service.js";
+import saveVideos from "./services/saveVideos.service.js";
 
 const runJob = async () => {
       try {
