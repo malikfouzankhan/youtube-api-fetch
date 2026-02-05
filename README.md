@@ -18,5 +18,4 @@ http://localhost:5000/api/videos
 
 http://localhost:5000/api/videos/search/?q=dhoni&page=1&limit=20
 
-![Frontend](./public/Frontend-architecture.png)# youtube-api-fetch
-Serri-AI backend assignment.
+![Frontend](./public/Frontend-architecture.png)
