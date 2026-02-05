@@ -1,9 +1,6 @@
 # Youtube Fetch API
 Project link: [Youtube Fetch](https://youtube.fouzan.dev)
 
-## Architecture
-
-
 ### Server usage
 1. Clone the repository.
 2. Install dependencies (ex: npm i, pnpm i).
@@ -14,10 +11,16 @@ Project link: [Youtube Fetch](https://youtube.fouzan.dev)
 7. Call the APIs, there are two of them. 
 8. Example APIs.
 
-![Backend](./public/Backend-architecture.png)
-
 http://localhost:5000/api/videos 
 
 http://localhost:5000/api/videos/search/?q=dhoni&page=1&limit=20
+
+## Architecture
+
+### Backend folder structure
+
+![Backend](./public/Backend-architecture.png)
+
+### Frontend folder structure
 
 ![Frontend](./public/Frontend-architecture.png)
