@@ -3,7 +3,7 @@ Project link: [Youtube Fetch](https://youtube.fouzan.dev)
 
 ## Architecture
 
-![Backend](./public/Backend-architecture.png)
+
 ### Server usage
 1. Clone the repository.
 2. Install dependencies (ex: npm i, pnpm i).
@@ -13,6 +13,8 @@ Project link: [Youtube Fetch](https://youtube.fouzan.dev)
 6. Go to Postman or any other API testing platforms.
 7. Call the APIs, there are two of them. 
 8. Example APIs.
+
+![Backend](./public/Backend-architecture.png)
 
 http://localhost:5000/api/videos 
 
