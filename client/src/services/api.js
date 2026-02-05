@@ -9,8 +9,7 @@ export const fetchVideos = async (page) => {
                         limit: 20,
                   },
             });
-            // console.log(response.data.data);
-            return response.data.data;
+            return response.data;
       } catch (error) {
             console.log(error.message);
       }
@@ -25,7 +24,6 @@ export const searchVideos = async (searchQuery, page) => {
                         page,
                   },
             });
-            // console.log(response.data.data);
             return response.data.data;
       } catch (error) {
             console.log(error.message);

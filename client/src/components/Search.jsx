@@ -28,7 +28,7 @@ const Search = ({videos, setVideos}) => {
                     type="button"
                     onClick={async () => {
                         let resetResult = await fetchVideos(1);
-                        setVideos(resetResult);
+                        setVideos(resetResult.data);
                         setQuery("")
                     }}
                     defaultValue="Reset"

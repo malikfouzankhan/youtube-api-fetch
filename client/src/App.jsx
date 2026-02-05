@@ -9,12 +9,14 @@ function App() {
   const [videos, setVideos] = useState([]);
   const [loader, setLoader] = useState(true);
   const [totalPages, setTotalPages] = useState(1);
-  const [currentPage, setCurrentPage] = useState(1);
-  let dummy_array = [1,2,3,4,5,6,7,8,9,10]
+  const [currentPage, setCurrentPage] = useState();
+  let dummy_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
   const loadVideos = async () => {
-    let data = await fetchVideos();
-    setVideos(data);
+    let data = await fetchVideos(currentPage);
+    setVideos(data.data);
+    setCurrentPage(data.page);
+    setTotalPages(data.totalPages)
     setLoader(false);
   }
 
@@ -25,11 +27,14 @@ function App() {
   return (
     <div className="h-dvh bg-gray-200 overflow-hidden flex flex-col">
 
-      <PaginationRounded />
 
       {/* Search Bar */}
       <div className="shadow-xl p-2">
-        <Search videos={videos} setVideos={setVideos}/>
+        <Search videos={videos} setVideos={setVideos} />
+      </div>
+
+      <div className="mx-auto py-4">
+        <PaginationRounded setCurrentPage={setCurrentPage} setVideos={setVideos} currentPage={currentPage} totalPages={totalPages} />
       </div>
 
       {/* Scrollable Area */}
