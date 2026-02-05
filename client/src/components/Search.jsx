@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { searchVideos } from "../services/api.js";
+import { searchVideos,fetchVideos } from "../services/api.js";
 
 const Search = ({videos, setVideos}) => {
     const [query, setQuery] = useState("");
@@ -23,7 +23,16 @@ const Search = ({videos, setVideos}) => {
                         setVideos(searchResult);
                     }}
                     defaultValue="Search"
-                    className="w-2/7 bg-blue-500 p-2 rounded-r-lg text-white font-semibold hover:bg-blue-800 cursor-pointer transition-colors" />
+                    className="w-2/7 bg-blue-500 p-2 text-white font-semibold hover:bg-blue-800 cursor-pointer transition-colors" />
+                    <input 
+                    type="button"
+                    onClick={async () => {
+                        let resetResult = await fetchVideos(1);
+                        setVideos(resetResult);
+                        setQuery("")
+                    }}
+                    defaultValue="Reset"
+                    className="w-2/7 bg-red-500 p-2 rounded-r-lg text-white font-semibold hover:bg-red-800 cursor-pointer transition-colors" />
                 </div>
             </div>
         </div>

@@ -3,10 +3,13 @@ import Search from "./components/Search.jsx"
 import Loader from "./components/Loader.jsx"
 import { useState, useEffect } from "react";
 import Video from "./components/Video.jsx";
+import PaginationRounded from "./components/Pagination.jsx";
 
 function App() {
   const [videos, setVideos] = useState([]);
   const [loader, setLoader] = useState(true);
+  const [totalPages, setTotalPages] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
   let dummy_array = [1,2,3,4,5,6,7,8,9,10]
 
   const loadVideos = async () => {
@@ -21,6 +24,8 @@ function App() {
   // fetchVideos();
   return (
     <div className="h-dvh bg-gray-200 overflow-hidden flex flex-col">
+
+      <PaginationRounded />
 
       {/* Search Bar */}
       <div className="shadow-xl p-2">
