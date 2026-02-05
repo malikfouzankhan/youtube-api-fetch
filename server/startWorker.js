@@ -2,14 +2,16 @@ import dbConnect from "./db/db.connect.js";
 import runJob from "./worker/worker.js";
 
 const startWorker = async () => {
+      let intervalId;
       try {
             await dbConnect();
 
-            // await runJob();
+            await runJob();
 
-            setInterval(runJob, 60000);
+            intervalId = setInterval(runJob, 60000);
       } catch (error) {
             console.error("[WORKER] Failed to start:", error);
+            clearInterval(intervalId);
             process.exit(1);
       }
 };
