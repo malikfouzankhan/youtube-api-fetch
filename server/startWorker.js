@@ -8,7 +8,7 @@ const startWorker = async () => {
 
             await runJob();
 
-            intervalId = setInterval(runJob, 60000);
+            intervalId = setInterval(runJob, 1800000);
       } catch (error) {
             console.error("[WORKER] Failed to start:", error);
             clearInterval(intervalId);
